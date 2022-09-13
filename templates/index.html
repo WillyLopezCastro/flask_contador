@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
+    <title>CONTADOR</title>
+</head>
+<body>
+    <h1>COUNTER</h1>
+
+
+    <h3>{{session['counter']}} times</h3>
+
+
+    <table>
+        <thead>
+            <th>
+                <form action='/sum' method='get'>
+                    <button class="btn btn-outline-success">Click</button>
+                </form>
+            </th>
+            <th>
+                <form action='/destroy_session' method='post'>
+                    <button class="btn btn-outline-danger">Reset</button>
+                </form>
+            </th>
+        </thead>
+    </table>
+
+
+</body>
+</html>
